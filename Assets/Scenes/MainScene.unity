@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 74574483}
   - component: {fileID: 74574482}
   - component: {fileID: 74574481}
+  - component: {fileID: 74574484}
   m_Layer: 5
   m_Name: ExerciseButton
   m_TagString: Untagged
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74574482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 74574484}
+        m_TargetAssemblyTypeName: goExerciseScene, Assembly-CSharp
+        m_MethodName: ExerciseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &74574482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74574479}
   m_CullTransparentMesh: 1
+--- !u!114 &74574484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74574479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d905b57c07b0c9249916a51be799da08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225912794
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +496,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.72101575, g: 0.8001595, b: 0.9245283, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -666,8 +691,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3a3b85bae6177544b865119bd44577f, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 8a049106de31e5549a529e0c183e48be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -675,7 +700,7 @@ SpriteRenderer:
   m_Size: {x: 8.42, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &552321205
@@ -702,10 +727,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 552321203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ee1120057904a4a8621c8abb28cb40, type: 3}
+  m_Script: {fileID: 11500000, guid: 477b9dbc5c6947b45a37cfcfe64424ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minamBody: {fileID: 0}
+  minamBody: {fileID: 552321208}
 --- !u!70 &552321208
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -799,7 +824,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 740503a3c499a384782c7db0ab59c9cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e5d311535e6c1d46a3fbfb58eedeee6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -807,7 +832,7 @@ SpriteRenderer:
   m_Size: {x: 9.71, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &607086687
@@ -851,7 +876,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628527675}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
