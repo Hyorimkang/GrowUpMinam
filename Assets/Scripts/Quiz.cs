@@ -12,16 +12,22 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;
     public GameObject QuizPanel;
     public GameObject GoPanel;
-    public AudioSource audioSource;
+
     
     int totalQuiz = 0;
     public int score;
+    
     //시작
     private void Start(){
         totalQuiz = QnA.Count;
         GoPanel.SetActive(false);
         makeQuestion();
-        GoPanel.GetComponent<AudioSource>().Play();
+        AudioSource BGM = GetComponent<AudioSource>();
+
+        //오디오 값이 있는지 확인
+        if(BGM != null){  
+            BGM.Play();
+        }
     }
 
     //게임 종료
@@ -36,12 +42,15 @@ public class Quiz : MonoBehaviour
         score+=1; 
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
-        correct_sound();
+        //정답일 때 효과음
+        AudioSource correct = GetComponent<AudioSource>();
+
+        if(correct != null){
+            correct.Play();
+        }
     }
-    //정답일 때 효과음
-    public void correct_sound(){
-        audioSource.Play();
-    }
+    
+    
 
     //오답
     public void wrong(){
@@ -49,12 +58,13 @@ public class Quiz : MonoBehaviour
         {
             QnA.RemoveAt(currentQuestion);
             makeQuestion();
-            incorrect_sound();
+            //정답일 때 효과음
+            AudioSource incorrect = GetComponent<AudioSource>();
+
+            if(incorrect != null){
+                incorrect.Play();
+            }
         }
-    }
-    //오답일 때 효과음
-    public void incorrect_sound(){
-        audioSource.Play();
     }
 
     //질문
