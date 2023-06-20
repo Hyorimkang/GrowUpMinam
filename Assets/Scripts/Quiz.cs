@@ -44,6 +44,10 @@ public class Quiz : MonoBehaviour
             if(QnA[currentQuestion].CorrectAnswer==i+1){
                 options[i].GetComponent<Answer>().isCorrect=true;
             }
+            else{
+                options[i].GetComponent<Answer>().isCorrect=false;
+                options[i].GetComponent<Button>().onClick.AddListener(wrong);
+            }
         }
     }
 
