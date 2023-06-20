@@ -24,7 +24,7 @@ public class Quiz : MonoBehaviour
         makeQuestion();
         AudioSource BGM = GetComponent<AudioSource>();
 
-        //오디오 값이 있는지 확인
+        //오디오 값이 있는지 확인 
         if(BGM != null){  
             BGM.Play();
         }
