@@ -18,5 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/ExerciseScene.unity
     guid: e7ccea3c00dc07e49ab9c84e44f27400
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8f309e62d62fb514899df448cafc5093, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8d85a27563fee274baa8b6aabda42e94, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 646fd8f9acdfffe4faebb505de14c841, type: 2}

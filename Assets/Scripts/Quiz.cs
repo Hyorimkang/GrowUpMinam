@@ -12,17 +12,45 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;
     public GameObject QuizPanel;
     public GameObject GoPanel;
+
     
     int totalQuiz = 0;
     public int score;
-//시작
+    
+    //시작
     private void Start(){
         totalQuiz = QnA.Count;
         GoPanel.SetActive(false);
         makeQuestion();
+        AudioSource BGM = GetComponent<AudioSource>();
+
+        //오디오 값이 있는지 확인 
+        if(BGM != null){  
+            BGM.Play();
+        }
     }
 
-//질문
+    //게임 종료
+    void GameOver(){
+        QuizPanel.SetActive(false);
+        GoPanel.SetActive(true);
+        ScoreText.text = "맞춘 개수 : "+score;
+    }
+
+    //정답
+    public void correct(){
+        score+=1; 
+        QnA.RemoveAt(currentQuestion);
+        makeQuestion();
+    }
+    
+    //오답
+    public void wrong(){
+        QnA.RemoveAt(currentQuestion);
+        makeQuestion();
+    }
+
+    //질문
     void makeQuestion(){
         if(QnA.Count > 0){
             currentQuestion = Random.Range(0,QnA.Count);
@@ -35,7 +63,7 @@ public class Quiz : MonoBehaviour
         }
     }
 
-//정답 구분
+    //정답 구분
     void SetAnswers(){
         for(int i = 0; i<options.Length; i++){
             options[i].GetComponent<Answer>().isCorrect=false;
@@ -44,31 +72,6 @@ public class Quiz : MonoBehaviour
             if(QnA[currentQuestion].CorrectAnswer==i+1){
                 options[i].GetComponent<Answer>().isCorrect=true;
             }
-            else{
-                options[i].GetComponent<Answer>().isCorrect=false;
-                options[i].GetComponent<Button>().onClick.AddListener(wrong);
-            }
         }
     }
-
-//정답
-    public void correct(){
-        score+=1; 
-        QnA.RemoveAt(currentQuestion);
-        makeQuestion();
-    }
-
-//오답
-    public void wrong(){
-        QnA.RemoveAt(currentQuestion);
-        makeQuestion();
-    }
-
-//게임 종료
-    void GameOver(){
-        QuizPanel.SetActive(false);
-        GoPanel.SetActive(true);
-        ScoreText.text = "맞춘 개수 : "+score;
-    }
 } 
-

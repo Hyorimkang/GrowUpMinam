@@ -14,6 +14,7 @@ public class Answer : MonoBehaviour
         }
         else{
             Debug.Log("틀렸습니다.");
+            quiz.wrong();
         }
     }
 }
