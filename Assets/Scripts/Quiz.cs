@@ -12,9 +12,11 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;
     public GameObject QuizPanel;
     public GameObject GoPanel;
+    
 
     
     int totalQuiz = 0;
+    int num=0;
     public int score;
     
     //시작
@@ -40,13 +42,30 @@ public class Quiz : MonoBehaviour
     //정답
     public void correct(){
         score+=1; 
+        if(score>num){
+            num++;
+            Sounds(true);
+        }
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
+        
     }
-    
+    //정답시 효과음
+    public void Sounds(bool isCorrect){
+        if(isCorrect){
+            AudioSource correct = GetComponent<AudioSource>();
+            
+            if(correct != null){  
+                correct.Play();
+            }
+        }
+    }
     //오답
     public void wrong(){
-        QnA.RemoveAt(currentQuestion);
+        if (currentQuestion >= 0 && currentQuestion < QnA.Count)
+        {
+            QnA.RemoveAt(currentQuestion);
+        }
         makeQuestion();
     }
 
