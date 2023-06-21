@@ -12,6 +12,9 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;
     public GameObject QuizPanel;
     public GameObject GoPanel;
+    public float timeLimit = 10f; // 문제당 제한 시간
+    private bool isAnswered; //문제 정답 여부
+    private float currentTime; //현재 시간
 
     
     int totalQuiz = 0;
@@ -73,6 +76,9 @@ public class Quiz : MonoBehaviour
             currentQuestion = Random.Range(0,QnA.Count);
             QuestionText.text = QnA[currentQuestion].Quiz; 
             SetAnswers();
+
+            // isAnswered = false;
+            // currentTime = timeLimit;
         }
         else{
             Debug.Log("다 풀었습니다.");
