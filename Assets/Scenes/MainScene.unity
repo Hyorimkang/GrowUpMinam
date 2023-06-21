@@ -267,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 74574479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d905b57c07b0c9249916a51be799da08, type: 3}
+  m_Script: {fileID: 11500000, guid: 317c07db40329d941b3b5d83bbdf29a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &225912794
@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 225912798}
   - component: {fileID: 225912797}
   - component: {fileID: 225912796}
+  - component: {fileID: 225912799}
   m_Layer: 5
   m_Name: StudyButton
   m_TagString: Untagged
@@ -353,7 +354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225912797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225912799}
+        m_TargetAssemblyTypeName: GoStudyScene, Assembly-CSharp
+        m_MethodName: StudyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225912797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +405,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225912794}
   m_CullTransparentMesh: 1
+--- !u!114 &225912799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225912794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33485e084e17e7740a212f64e5f20a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &249235182
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,18 +716,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< HEAD
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6052b902610cdd346a41adb05359f89a, type: 3}
-=======
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8a049106de31e5549a529e0c183e48be, type: 3}
->>>>>>> 4ef50174748e4c7d0097059f6294459d000d1860
+  m_Sprite: {fileID: 21300000, guid: 6052b902610cdd346a41adb05359f89a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.71, y: 10.24}
+  m_Size: {x: 8.42, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -732,14 +752,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 552321203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: a4ee536fecd80b7489ac719d65861086, type: 3}
-=======
   m_Script: {fileID: 11500000, guid: 477b9dbc5c6947b45a37cfcfe64424ec, type: 3}
->>>>>>> 4ef50174748e4c7d0097059f6294459d000d1860
   m_Name: 
   m_EditorClassIdentifier: 
-  minamBody: {fileID: 552321208}
 --- !u!70 &552321208
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -833,11 +848,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 0d985287349ff864cbc0bf31392924eb, type: 3}
-=======
-  m_Sprite: {fileID: 21300000, guid: 5e5d311535e6c1d46a3fbfb58eedeee6, type: 3}
->>>>>>> 4ef50174748e4c7d0097059f6294459d000d1860
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

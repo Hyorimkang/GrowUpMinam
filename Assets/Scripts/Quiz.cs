@@ -12,9 +12,6 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;
     public GameObject QuizPanel;
     public GameObject GoPanel;
-    public float timeLimit = 10f; // 문제당 제한 시간
-    private bool isAnswered; //문제 정답 여부
-    private float currentTime; //현재 시간
 
     
     int totalQuiz = 0;
@@ -45,29 +42,12 @@ public class Quiz : MonoBehaviour
         score+=1; 
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
-        //정답일 때 효과음
-        AudioSource correct = GetComponent<AudioSource>();
-
-        if(correct != null){
-            correct.Play();
-        }
     }
     
-    
-
     //오답
     public void wrong(){
-        if (currentQuestion >= 0 && currentQuestion < QnA.Count)
-        {
-            QnA.RemoveAt(currentQuestion);
-            makeQuestion();
-            //정답일 때 효과음
-            AudioSource incorrect = GetComponent<AudioSource>();
-
-            if(incorrect != null){
-                incorrect.Play();
-            }
-        }
+        QnA.RemoveAt(currentQuestion);
+        makeQuestion();
     }
 
     //질문
@@ -76,9 +56,6 @@ public class Quiz : MonoBehaviour
             currentQuestion = Random.Range(0,QnA.Count);
             QuestionText.text = QnA[currentQuestion].Quiz; 
             SetAnswers();
-
-            // isAnswered = false;
-            // currentTime = timeLimit;
         }
         else{
             Debug.Log("다 풀었습니다.");
@@ -95,11 +72,6 @@ public class Quiz : MonoBehaviour
             if(QnA[currentQuestion].CorrectAnswer==i+1){
                 options[i].GetComponent<Answer>().isCorrect=true;
             }
-            else{
-                options[i].GetComponent<Answer>().isCorrect=false;
-                options[i].GetComponent<Button>().onClick.AddListener(wrong);
-            }
         }
     }
 } 
-
