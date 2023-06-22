@@ -7,45 +7,60 @@ public class GamePlay : MonoBehaviour
 {
     Vector2 touch;
     public GameObject fat;  //지방 오브젝트
-    public Text scoreText;  //점수를 표시할 텍스트 UI
+    public Text scoreText;  //점수 텍스트
     public GameObject PlayStartPanel;  //게임 시작 전 패널
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int score = 0;  //터치한 지방 수
     private float spawnDelay = 1f;  // 오브젝트 생성 딜레이
     private float spawnTimer = 0f;  // 오브젝트 생성 타이머
     private int maxObjectCount = 5;  // 화면에 표시될 최대 오브젝트 수
+    private float Timer = 30;  //30초 제한시간
+    public Text TimerText;  //제한시간 텍스트
 
+    bool StartCheck = false;  //게임시작 버튼 눌렀는지 안눌렀는지
     //게임시작 버튼을 눌렀을 때
     public void GameStart()
     {
         PlayStartPanel.SetActive(false);  //시작 패널 안보이게 함
         SpawnInitialObjects();
+        StartCheck = true;
     }
 
     void Update()
     {
-        //터치
-        if (Input.GetMouseButtonUp(0))
+        if(StartCheck)  //시작 버튼을 누르면
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
-
-            if (hitCollider != null && objectsList.Contains(hitCollider.gameObject))// 오브젝트를 터치한 경우
+            if((int)Timer == 0){
+                Debug.Log("시간 끝");
+                TimerText.text = "제한시간:종료";
+                
+            }else{
+                Timer -= Time.deltaTime;
+                TimerText.text = "제한시간: " + (int)Timer;
+            }
+            if (Input.GetMouseButtonUp(0))//터치
             {
-                IncreaseScore();  // 점수 증가
-                RemoveObject(hitCollider.gameObject);  // 지방 오브젝트 제거
-                SpawnObject();  // 새로운 오브젝트 생성
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
+
+                if (hitCollider != null && objectsList.Contains(hitCollider.gameObject))// 오브젝트를 터치한 경우
+                {
+                    IncreaseScore();  // 점수 증가
+                    RemoveObject(hitCollider.gameObject);  // 지방 오브젝트 제거
+                    SpawnObject();  // 새로운 오브젝트 생성
+                }
+            }
+            // 타이머 업데이트
+            spawnTimer += Time.deltaTime;
+
+            if (spawnTimer >= spawnDelay)
+            {
+                // 오브젝트 생성 타이머가 딜레이 이상일 때
+                spawnTimer = 0f;  // 타이머 초기화
+                SpawnObject();  // 오브젝트 생성
             }
         }
-        // 타이머 업데이트
-        spawnTimer += Time.deltaTime;
-
-        if (spawnTimer >= spawnDelay)
-        {
-            // 오브젝트 생성 타이머가 딜레이 이상일 때
-            spawnTimer = 0f;  // 타이머 초기화
-            SpawnObject();  // 오브젝트 생성
-        }
+        
     }
 
     private void IncreaseScore()  //지방 제거하면 점수 증가
