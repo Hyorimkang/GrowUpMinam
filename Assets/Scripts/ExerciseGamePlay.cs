@@ -9,17 +9,23 @@ public class GamePlay : MonoBehaviour
     public GameObject fat;  //지방 오브젝트
     public Text scoreText;  //점수 텍스트
     public GameObject PlayStartPanel;  //게임 시작 전 패널
+    public GameObject GameOverPanel;  //게임 종료 패널
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
-    private int score = 0;  //터치한 지방 수
+    private int RemoveFatCount = 0;  //제거한 지방 수
     private float spawnDelay = 1f;  // 오브젝트 생성 딜레이
     private float spawnTimer = 0f;  // 오브젝트 생성 타이머
     private int maxObjectCount = 5;  // 화면에 표시될 최대 오브젝트 수
-    private float Timer = 30;  //30초 제한시간
+    private float Timer = 31;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
-
+    public Text WeightLossText;  //감량 텍스트
+    public Text FatCountText;  //제거한 지방 총 개수
     bool StartCheck = false;  //게임시작 버튼 눌렀는지 안눌렀는지
-    //게임시작 버튼을 눌렀을 때
-    public void GameStart()
+
+    private void Start() {
+        GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
+    }
+
+    public void GameStart()  //게임시작 버튼을 눌렀을 때
     {
         PlayStartPanel.SetActive(false);  //시작 패널 안보이게 함
         SpawnInitialObjects();
@@ -30,14 +36,17 @@ public class GamePlay : MonoBehaviour
     {
         if(StartCheck)  //시작 버튼을 누르면
         {
-            if((int)Timer == 0){
-                Debug.Log("시간 끝");
+            //30초 제한시간 타이머
+            if((int)Timer == 0){  //제한시간 끝나면
                 TimerText.text = "제한시간:종료";
-                
+                GameOverPanel.SetActive(true);  //게임 종료 패널 보이게 함
+                FatCountText.text = "지방 " + RemoveFatCount + "개 제거";
+                WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";
             }else{
                 Timer -= Time.deltaTime;
-                TimerText.text = "제한시간: " + (int)Timer;
+                TimerText.text = "제한시간: " + (int)Timer + "초";
             }
+
             if (Input.GetMouseButtonUp(0))//터치
             {
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -62,11 +71,24 @@ public class GamePlay : MonoBehaviour
         }
         
     }
-
+    private int WeightLoss(){  //감량한 kg 계산
+        int loss = 0;  //감량 kg
+        if(RemoveFatCount>=70)  //70개 이상이면 5kg 감량
+            loss = 5;
+        else if(RemoveFatCount>=50)  //50개 이상이면 3kg 감량
+            loss = 3;
+        else if(RemoveFatCount>=20)  //20개 이상이면 2kg 감량
+            loss = 2;
+        else if(RemoveFatCount>=10)  //10개 이상이면 1kg 감량
+            loss = 1;
+        else  //10개 미만이면 0kg 감량
+            loss = 0;
+        return loss;
+    }
     private void IncreaseScore()  //지방 제거하면 점수 증가
     {
-        score++;
-        scoreText.text = "제거한 지방: " + score.ToString();
+        RemoveFatCount++;
+        scoreText.text = "제거한 지방: " + RemoveFatCount;
     }
 
     private void RemoveObject(GameObject obj)  //지방 오브젝트 제거
