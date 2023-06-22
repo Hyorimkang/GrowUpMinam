@@ -5,15 +5,9 @@ using UnityEngine;
 public class MinamTouch : MonoBehaviour
 {
     Vector2 touchPosition;
-    public Collider2D minamBody;  //미남이 몸
     string[] minamSay = {"엄마..."};  //미남이 말풍선 텍스트
     bool isClicked = false;  // 클릭 이벤트 발생 여부를 저장하는 변수
 
-    void Start()
-    {
-        minamBody = GetComponent<Collider2D>();
-    }
-    
     void Update()
     {
         //미남이를 터치했을때 랜덤으로 말풍선이 나옴
@@ -30,6 +24,8 @@ public class MinamTouch : MonoBehaviour
 
         if (hit.collider != null && isClicked)  //미남이 클릭했을때 터치이벤트 발생
         {
+            
+            Debug.Log("클릭");
             isClicked = false; //터치 이벤트가 발생했으니 다음 프레임에선 발생하지 않도록 false로 변경해줌
             //말풍선 이벤트 발생
         }
