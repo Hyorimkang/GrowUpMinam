@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 540f4d7fe1b3c254c91ec0862ad682b9
+  - enabled: 1
+    path: Assets/Scenes/StudyMode.unity
+    guid: 8672a89f7a5404b429b3810ead97c772
+  - enabled: 1
+    path: Assets/Scenes/ExerciseScene.unity
+    guid: e7ccea3c00dc07e49ab9c84e44f27400
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8d85a27563fee274baa8b6aabda42e94, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 646fd8f9acdfffe4faebb505de14c841, type: 2}
