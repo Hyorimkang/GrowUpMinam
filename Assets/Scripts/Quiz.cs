@@ -5,19 +5,18 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-    public List<QuizandAnswer> QnA;
-    public GameObject[] options;
-    public int currentQuestion;
-    public Text QuestionText;
-    public Text ScoreText;
-    public GameObject QuizPanel;
-    public GameObject GoPanel;
+    public List<QuizandAnswer> QnA;  //질문 리스트
+    public GameObject[] options;  //정답을 옵션 배열
+    public int currentQuestion;  //질문 할 개수
+    public Text QuestionText;  //질문 텍스트
+    public Text ScoreText;  //점수 
+    public GameObject QuizPanel;  //질문을 띄울 패널
+    public GameObject GoPanel;  //게임오버 패널
     
 
     
-    int totalQuiz = 0;
-    int num=0;
-    public int score;
+    private int totalQuiz = 0;  //총 질문 개수
+    private int score;  //정답 개수
     
     //시작
     private void Start(){
@@ -33,7 +32,7 @@ public class Quiz : MonoBehaviour
     }
 
     //게임 종료
-    void GameOver(){
+    public void GameOver(){
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
         ScoreText.text = "맞춘 개수 : "+score;
@@ -42,10 +41,6 @@ public class Quiz : MonoBehaviour
     //정답
     public void correct(){
         score+=1; 
-        if(score>num){
-            num++;
-            Sounds(true);
-        }
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
         
