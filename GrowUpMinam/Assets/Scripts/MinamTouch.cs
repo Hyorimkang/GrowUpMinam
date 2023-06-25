@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MinamTouch : MonoBehaviour
 {
     Vector2 touchPosition;
-    string[] MinamSay = {"엄마...","내가 성공할 수 있을까?", "쩝쩝짭짭짭","여동생을 날 어떻게 생각할까?"};  //미남이 말풍선 텍스트
+    string[] MinamSay = {"엄마...","내가 성공할 수 있을까?", "쩝쩝짭짭짭","여동생을 날 어떻게\n생각할까?","아자!아자!"};  //미남이 말풍선 텍스트
     public Text BubbleText;  //말풍선 대사 텍스트
     public GameObject Bubble;  //말풍선 오브젝트
     bool isClicked = false;  // 클릭 이벤트 발생 여부를 저장하는 변수
@@ -14,10 +14,9 @@ public class MinamTouch : MonoBehaviour
 
     private void Start() {
         Bubble.SetActive(false);  //말풍선 안보이게 함
-
         RectTransform BubbleRectTransform = Bubble.GetComponent<RectTransform>();
-        RectTransform BubbleTextRectTransform = BubbleText.GetComponent<RectTransform>();
-        BubbleTextRectTransform.anchoredPosition = new Vector2(BubbleRectTransform.anchoredPosition.x, BubbleRectTransform.anchoredPosition.y);
+        BubbleRectTransform.position = new Vector3(1050, BubbleRectTransform.position.y, BubbleRectTransform.position.z);  //말풍선 위치
+        BubbleRectTransform.pivot = new Vector2(0f, 0.5f);//말풍선 위치 고정
     }
 
     void Update()
