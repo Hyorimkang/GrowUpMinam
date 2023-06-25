@@ -12,8 +12,6 @@ public class GamePlay : MonoBehaviour
     public GameObject GameOverPanel;  //게임 종료 패널
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int RemoveFatCount = 0;  //제거한 지방 수
-    private float spawnDelay = 1f;  // 오브젝트 생성 딜레이
-    private float spawnTimer = 0f;  // 오브젝트 생성 타이머
     private int maxObjectCount = 5;  // 화면에 표시될 최대 오브젝트 수
     private float Timer = 31;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
@@ -62,14 +60,6 @@ public class GamePlay : MonoBehaviour
                     RemoveObject(hitCollider.gameObject);  // 지방 오브젝트 제거
                     SpawnObject();  // 새로운 오브젝트 생성
                 }
-            }
-            // 타이머 업데이트
-            spawnTimer += Time.deltaTime;
-
-            if (spawnTimer >= spawnDelay)
-            {
-                // 오브젝트 생성 타이머가 딜레이 이상일 때
-                spawnTimer = 0f;  // 타이머 초기화
             }
         }
         
