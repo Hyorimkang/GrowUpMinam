@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Sounds;
+
 public class GamePlay : MonoBehaviour
 {
     Vector2 touch;
@@ -18,7 +18,7 @@ public class GamePlay : MonoBehaviour
     private float Timer = 31;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
-    public Text FatCountText;  //제거한 지방 총 개수
+    public Text FatCountText;  //제거한 지방 총 개수 텍스트
     bool PlayCheck = false;  //게임시작 했는지 안했는지
 
     private void Start() {
@@ -43,6 +43,7 @@ public class GamePlay : MonoBehaviour
                 GameOverPanel.SetActive(true);  //게임 종료 패널 보이게 함
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
+                Stats.Weight -= WeightLoss();  //몸무게 감량
                 PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
@@ -73,8 +74,8 @@ public class GamePlay : MonoBehaviour
         }
         
     }
-    private int WeightLoss(){  //감량한 kg 계산
-        int loss = 0;  //감량 kg
+    private int WeightLoss(){  //감량한 몸무게 계산
+        int loss = 0;  //감량한 몸무게
         if(RemoveFatCount>=70)  //70개 이상이면 5kg 감량
             loss = 5;
         else if(RemoveFatCount>=50)  //50개 이상이면 3kg 감량
