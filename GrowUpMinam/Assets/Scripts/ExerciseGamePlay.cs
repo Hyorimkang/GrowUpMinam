@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using static Sounds;
 public class GamePlay : MonoBehaviour
 {
     Vector2 touch;
@@ -23,12 +23,13 @@ public class GamePlay : MonoBehaviour
 
     private void Start() {
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
+        Sounds.instance.BGM();  //브금 재생
     }
 
     public void GameStart()  //게임시작 버튼을 눌렀을 때
     {
         PlayStartPanel.SetActive(false);  //시작 패널 안보이게 함
-        SpawnInitialObjects();
+        SpawnInitialObjects();  //오브젝트 5개 생성
         StartCheck = true;
     }
 
@@ -54,6 +55,7 @@ public class GamePlay : MonoBehaviour
 
                 if (hitCollider != null && objectsList.Contains(hitCollider.gameObject))// 오브젝트를 터치한 경우
                 {
+                    Sounds.instance.FatTouchSound();  //지방 터치 효과음
                     IncreaseScore();  // 점수 증가
                     RemoveObject(hitCollider.gameObject);  // 지방 오브젝트 제거
                     SpawnObject();  // 새로운 오브젝트 생성
@@ -134,9 +136,8 @@ public class GamePlay : MonoBehaviour
             objectsList.Add(newFatObject);
         }
     }
-    private Vector3 GetRandomPositionInScreen()
+    private Vector3 GetRandomPositionInScreen()// 캔버스의 사이즈를 기준으로 랜덤 위치 생성
     {
-        // 캔버스의 사이즈를 기준으로 랜덤 위치 생성
         //화면 밖으로 지방 오브젝트가 삐져나가지 않도록 랜덤 위치 범위를 스크린 크기보다 적게 설정
         float x = Random.Range(Screen.width * 0.1f, Screen.width * 0.9f);
         float y = Random.Range(Screen.height * 0.1f, Screen.height * 0.9f);
