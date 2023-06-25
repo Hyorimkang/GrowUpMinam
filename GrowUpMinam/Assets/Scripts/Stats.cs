@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 {
-    public Text Knowledge;  //지식 수준
-    public Text Weight;  //몸무게
-    public Text Level;  //단계
+    public static Text Knowledge;  //지식 수준
+    public static Text Weight;  //몸무게
+    public static Text Level;  //단계
     void Start()
     {
         

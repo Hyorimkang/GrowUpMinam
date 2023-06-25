@@ -19,7 +19,7 @@ public class GamePlay : MonoBehaviour
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
     public Text FatCountText;  //제거한 지방 총 개수
-    bool StartCheck = false;  //게임시작 버튼 눌렀는지 안눌렀는지
+    bool PlayCheck = false;  //게임시작 했는지 안했는지
 
     private void Start() {
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
@@ -29,20 +29,21 @@ public class GamePlay : MonoBehaviour
     public void GameStart()  //게임시작 버튼을 눌렀을 때
     {
         PlayStartPanel.SetActive(false);  //시작 패널 안보이게 함
-        SpawnInitialObjects();  //오브젝트 5개 생성
-        StartCheck = true;
+        SpawnInitialObjects();  //지방 오브젝트 5개 생성
+        PlayCheck = true;
     }
 
     void Update()
     {
-        if(StartCheck)  //시작 버튼을 누르면
+        if(PlayCheck)  //게임이 시작하면
         {
             //30초 제한시간 타이머
             if((int)Timer == 0){  //제한시간 끝나면
                 TimerText.text = "제한시간:종료";
                 GameOverPanel.SetActive(true);  //게임 종료 패널 보이게 함
-                FatCountText.text = "지방 " + RemoveFatCount + "개 제거";
-                WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";
+                FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
+                WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
+                PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
                 TimerText.text = "제한시간: " + (int)Timer + "초";
@@ -68,7 +69,6 @@ public class GamePlay : MonoBehaviour
             {
                 // 오브젝트 생성 타이머가 딜레이 이상일 때
                 spawnTimer = 0f;  // 타이머 초기화
-                SpawnObject();  // 오브젝트 생성
             }
         }
         
@@ -95,12 +95,10 @@ public class GamePlay : MonoBehaviour
 
     private void RemoveObject(GameObject obj)  //지방 오브젝트 제거
     {
-        Debug.Log("지방 제거");
         objectsList.Remove(obj);  //리스트에서 제거
         Destroy(obj);  //아예 제거
     }
-
-    private void SpawnInitialObjects()
+    private void SpawnInitialObjects()  //5개까지만 지방 오브젝트 생성
     {
         for (int i = 0; i < maxObjectCount; i++)
         {
