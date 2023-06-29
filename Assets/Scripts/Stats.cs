@@ -14,10 +14,6 @@ public class Stats : MonoBehaviour
     public static int Knowledge;  //지식 수준
     public static int Weight = 120;  //몸무게(일단은 120kg으로 설정)
     public static int level;  //레벨
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
