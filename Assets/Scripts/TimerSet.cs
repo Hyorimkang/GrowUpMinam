@@ -26,9 +26,13 @@ public class TimerSet : MonoBehaviour
             timerTxt.text = Mathf.Floor(selectCountDown).ToString();
         }
         else{
+            
             selectCountDown -= Time.deltaTime;
-            timerTxt.text = Mathf.Floor(selectCountDown).ToString();
+            timerTxt.text = Mathf.Floor(selectCountDown+1).ToString();
+            if(selectCountDown<=0){
+                selectCountDown=0;
+                quiz.GameOver();
+            }
         }
-        
     }
 }
