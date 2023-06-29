@@ -12,8 +12,8 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;  //점수 
     public GameObject QuizPanel;  //질문을 띄울 패널
     public GameObject GoPanel;  //게임오버 패널
-    
-
+    public StartBtn StartBtn;  //시작 버튼
+    public TimerSet timerSet; //타이머
     
     private int totalQuiz = 0;  //총 질문 개수
     private int score;  //정답 개수
@@ -23,12 +23,14 @@ public class Quiz : MonoBehaviour
         totalQuiz = QnA.Count;
         GoPanel.SetActive(false);
         makeQuestion();
-        AudioSource BGM = GetComponent<AudioSource>();
+        
+        StudySounds.instance.StudyBGM(); //BGM 재생
+    }
 
-        //오디오 값이 있는지 확인 
-        if(BGM != null){  
-            BGM.Play();
-        }
+    //게임 시작 버튼 눌렀을 때
+    public void GameStart(){
+        timerSet.timer();
+        StartBtn.StartButton();
     }
 
     //게임 종료
@@ -43,23 +45,15 @@ public class Quiz : MonoBehaviour
         score+=1; 
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
-        
+        StudySounds.instance.Correct(); //정답 시 효과음
     }
-    //정답시 효과음
-    public void Sounds(bool isCorrect){
-        if(isCorrect){
-            AudioSource correct = GetComponent<AudioSource>();
-            
-            if(correct != null){  
-                correct.Play();
-            }
-        }
-    }
+    
     //오답
     public void wrong(){
         if (currentQuestion >= 0 && currentQuestion < QnA.Count)
         {
             QnA.RemoveAt(currentQuestion);
+            StudySounds.instance.Wrong(); //오답 시 효과음
         }
         makeQuestion();
     }
