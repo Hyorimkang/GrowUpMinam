@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ExerciseGamePlay : MonoBehaviour
 {
-    Vector2 touch;
     public GameObject fat;  //지방 오브젝트
     public Text scoreText;  //점수 텍스트
     public GameObject PlayStartPanel;  //게임 시작 전 패널
@@ -13,15 +12,16 @@ public class ExerciseGamePlay : MonoBehaviour
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int RemoveFatCount = 0;  //제거한 지방 수
     private int maxObjectCount = 5;  // 화면에 표시될 최대 지방 오브젝트 수
-    private float Timer = 31;  //30초 제한시간
+    private float Timer = 5;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
     bool PlayCheck = false;  //게임시작 했는지 안했는지
 
+
     private void Start() {
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
-        Sounds.instance.BGM();  //브금 재생
+        ExerciseSounds.instance.BGM();  //브금 재생
     }
 
     public void GameStart()  //게임시작 버튼을 눌렀을 때
@@ -42,9 +42,8 @@ public class ExerciseGamePlay : MonoBehaviour
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
                 Stats.Weight -= WeightLoss();  //몸무게 감량
-                PlayerPrefs.SetInt("WeightLoss", WeightLoss());  //감량한 몸무게 저장
+                PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
                 PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
-
                 PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
@@ -58,7 +57,7 @@ public class ExerciseGamePlay : MonoBehaviour
 
                 if (hitCollider != null && objectsList.Contains(hitCollider.gameObject))// 오브젝트를 터치한 경우
                 {
-                    Sounds.instance.FatTouchSound();  //지방 터치 효과음
+                    ExerciseSounds.instance.FatTouchSound();  //지방 터치 효과음
                     IncreaseScore();  // 점수 증가
                     RemoveObject(hitCollider.gameObject);  // 지방 오브젝트 제거
                     SpawnObject();  // 새로운 오브젝트 생성
@@ -75,12 +74,21 @@ public class ExerciseGamePlay : MonoBehaviour
             loss = 3;
         else if(RemoveFatCount>=20)  //20개 이상이면 2kg 감량
             loss = 2;
-        else if(RemoveFatCount>=10)  //10개 이상이면 1kg 감량
+        else if(RemoveFatCount>=0)  //0개 이상이면 1kg 감량
             loss = 1;
-        else  //10개 미만이면 0kg 감량
-            loss = 0;
         return loss;
     }
+    private string WeightGrade(int weightLoss){  //감량한 몸무게 등급 나누기
+        string grade = null;
+        switch(weightLoss){
+            case 5: grade = "A"; break;
+            case 3: grade = "B"; break;
+            case 2: grade = "C"; break;
+            case 1: grade = "D"; break;
+        }
+        return grade;
+    }
+
     private void IncreaseScore()  //지방 제거하면 점수 증가
     {
         RemoveFatCount++;
