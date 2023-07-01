@@ -44,6 +44,7 @@ public class ExerciseGamePlay : MonoBehaviour
                 Stats.Weight -= WeightLoss();  //몸무게 감량
                 PlayerPrefs.SetInt("WeightLoss", WeightLoss());  //감량한 몸무게 저장
                 PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
+
                 PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
