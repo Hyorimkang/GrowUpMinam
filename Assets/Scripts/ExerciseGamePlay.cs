@@ -12,7 +12,7 @@ public class ExerciseGamePlay : MonoBehaviour
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int RemoveFatCount = 0;  //제거한 지방 수
     private int maxObjectCount = 5;  // 화면에 표시될 최대 지방 오브젝트 수
-    private float Timer = 5;  //30초 제한시간
+    private float Timer = 31;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
