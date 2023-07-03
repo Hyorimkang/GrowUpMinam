@@ -12,7 +12,7 @@ public class ExerciseGamePlay : MonoBehaviour
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int RemoveFatCount = 0;  //제거한 지방 수
     private int maxObjectCount = 5;  // 화면에 표시될 최대 지방 오브젝트 수
-    private float Timer = 31;  //30초 제한시간
+    private float Timer = 2;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
@@ -42,8 +42,8 @@ public class ExerciseGamePlay : MonoBehaviour
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
                 Stats.Weight -= WeightLoss();  //몸무게 감량
-                // PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
-                PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
+                PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
+                // PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
                 PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
                 PlayCheck = false;  //종료
             }else{

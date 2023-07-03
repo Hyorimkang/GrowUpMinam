@@ -9,9 +9,12 @@ public class GaugeBarSet : MonoBehaviour
     string grade;  //등급
     public GameObject[] characterObjects;  // 레벨에 따른 캐릭터 오브젝트 배열
     static int currentLevel = 0;  // 현재 레벨
+
     private void Start() {
         PlayerPrefs.SetInt("레벨",currentLevel);
+        characterObjects[currentLevel].SetActive(true);  //현재 레벨 미남이가 보이게
     }
+
     private void Update() {
         //게임 종료가 되면 값을 받아와 게이지바를 채움
         if(PlayerPrefs.GetString("게임실행여부").Equals("게임종료")){
