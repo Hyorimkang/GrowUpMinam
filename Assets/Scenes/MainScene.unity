@@ -1395,6 +1395,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GaugeBarImage: {fileID: 1086340064}
+  characterObjects:
+  - {fileID: 552321203}
+  - {fileID: 2023291580}
+  - {fileID: 1268594916}
+  currentLevel: 0
 --- !u!4 &731395528
 Transform:
   m_ObjectHideFlags: 0

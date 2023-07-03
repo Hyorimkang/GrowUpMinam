@@ -15,7 +15,7 @@ public class Days : MonoBehaviour
 
     void Update()
     {
-        if(gameCount == 3){  //만약 미니게임을 3번 했다면 한달 지남
+        if(gameCount == 5){  //만약 미니게임을 5번 했다면 한달 지남
             gameCount = 0;//게임 횟수 다시 초기화
             month += 1;  //날짜 증가
             PlayerPrefs.SetInt("게임횟수",gameCount);
