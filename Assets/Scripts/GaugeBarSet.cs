@@ -7,12 +7,12 @@ public class GaugeBarSet : MonoBehaviour
     public Image GaugeBarImage;  //게이지 이미지
     static float Gauge;  //게이지 양 저장 변수
     string grade;  //등급
-    public GameObject[] characterObjects;  // 레벨에 따른 캐릭터 오브젝트 배열
+    public GameObject[] MinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
     static int currentLevel = 0;  // 현재 레벨
 
     private void Start() {
         PlayerPrefs.SetInt("레벨",currentLevel);
-        characterObjects[currentLevel].SetActive(true);  //현재 레벨 미남이가 보이게
+        MinamObjects[currentLevel].SetActive(true);  //현재 레벨 미남이가 보이게
     }
 
     private void Update() {
@@ -29,7 +29,7 @@ public class GaugeBarSet : MonoBehaviour
     {
         float amount = 0;
         switch(grade){
-            case "A" :amount = 0.3f; break;
+            case "A" :amount = 0.1f; break;
             case "B" : amount = 0.08f; break;
             case "C" : amount = 0.05f; break;
             case "D" : amount = 0.03f; break;
@@ -42,8 +42,8 @@ public class GaugeBarSet : MonoBehaviour
         Debug.Log("레벨업");
         currentLevel++;
         PlayerPrefs.SetInt("레벨",currentLevel);
-        characterObjects[currentLevel-1].SetActive(false);  // 이전 레벨 캐릭터 비활성화
-        characterObjects[currentLevel].SetActive(true);  // 현재 레벨 캐릭터 활성화
+        MinamObjects[currentLevel-1].SetActive(false);  // 이전 레벨 캐릭터 비활성화
+        MinamObjects[currentLevel].SetActive(true);  // 현재 레벨 캐릭터 활성화
         Gauge = 0;  //게이지 초기화
     }
     

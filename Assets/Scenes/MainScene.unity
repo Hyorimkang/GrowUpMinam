@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GaugeBarImage: {fileID: 1086340064}
-  characterObjects:
+  MinamObjects:
   - {fileID: 552321203}
   - {fileID: 2023291580}
   - {fileID: 1268594916}

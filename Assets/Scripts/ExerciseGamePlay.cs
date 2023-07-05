@@ -12,16 +12,17 @@ public class ExerciseGamePlay : MonoBehaviour
     private List<GameObject> objectsList = new List<GameObject>();  // 생성된 오브젝트를 저장할 리스트
     private int RemoveFatCount = 0;  //제거한 지방 수
     private int maxObjectCount = 5;  // 화면에 표시될 최대 지방 오브젝트 수
-    private float Timer = 2;  //30초 제한시간
+    private float Timer = 31;  //30초 제한시간
     public Text TimerText;  //제한시간 텍스트
     public Text WeightLossText;  //감량 텍스트
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
     bool PlayCheck = false;  //게임시작 했는지 안했는지
-
+    public GameObject[] ExercisingMinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
 
     private void Start() {
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
         ExerciseSounds.instance.BGM();  //브금 재생
+        ExercisingMinamObjects[PlayerPrefs.GetInt("레벨")].SetActive(true);  //현재 레벨 운동하는 미남이가 보이게
     }
 
     public void GameStart()  //게임시작 버튼을 눌렀을 때
@@ -42,8 +43,10 @@ public class ExerciseGamePlay : MonoBehaviour
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
                 Stats.Weight -= WeightLoss();  //몸무게 감량
-                PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
-                // PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
+                // PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
+
+        //여기 아래 두 코드 다른 미니게임에서도 게임 종료시에 넣어줘야함. 등급 나누는 메서드도 만들고
+                PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
                 PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
                 PlayCheck = false;  //종료
             }else{
@@ -51,10 +54,19 @@ public class ExerciseGamePlay : MonoBehaviour
                 TimerText.text = "제한시간: " + (int)Timer + "초";
             }
 
-            if (Input.GetMouseButtonUp(0))//터치
+            if (Input.GetMouseButtonUp(0) || Input.touchCount > 0)//터치
             {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
+                Vector3 inputPosition = Vector3.zero;  //초기화
+
+                if (Input.GetMouseButtonUp(0))  //클릭시
+                {
+                    inputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                }
+                else if (Input.touchCount > 0)  //터치시
+                {
+                    inputPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                }
+                Collider2D hitCollider = Physics2D.OverlapPoint(inputPosition);
 
                 if (hitCollider != null && objectsList.Contains(hitCollider.gameObject))// 오브젝트를 터치한 경우
                 {
