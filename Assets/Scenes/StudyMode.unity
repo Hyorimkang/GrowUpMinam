@@ -572,7 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StudyBGMClip: {fileID: 8300000, guid: 9082b8c6f469afc408ad1d93575e30fd, type: 3}
   CorrectClip: {fileID: 8300000, guid: 3e35820d53b634446a1d38455d95d345, type: 3}
-  WrongClip: {fileID: 0}
+  WrongClip: {fileID: 8300000, guid: 3c55325e7caf9f942b2a1df4478045cb, type: 3}
   audioSource: {fileID: 413563836}
 --- !u!82 &413563836
 AudioSource:
