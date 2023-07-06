@@ -12,8 +12,10 @@ public class Quiz : MonoBehaviour
     public Text ScoreText;  //점수 
     public GameObject QuizPanel;  //질문을 띄울 패널
     public GameObject GoPanel;  //게임오버 패널
+    public GameObject TutorialPanel; //게임 방법 패널
     public StartBtn StartBtn;  //시작 버튼
-    public TimerSet timerSet; //타이머
+    //public TimerSet timerSet; //타이머
+    
     
     private int totalQuiz = 0;  //총 질문 개수
     private int score;  //정답 개수
@@ -23,14 +25,14 @@ public class Quiz : MonoBehaviour
         totalQuiz = QnA.Count;
         GoPanel.SetActive(false);
         makeQuestion();
-        
         StudySounds.instance.StudyBGM(); //BGM 재생
     }
 
     //게임 시작 버튼 눌렀을 때
     public void GameStart(){
-        timerSet.timer();
         StartBtn.StartButton();
+        // TutorialPanel.SetActive(false);
+        // timerSet.timer();
     }
 
     //게임 종료
