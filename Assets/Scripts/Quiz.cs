@@ -19,7 +19,7 @@ public class Quiz : MonoBehaviour
     private int totalQuiz = 0;  //총 질문 개수
     public int score;  //정답 개수
     public bool check; //이미지 정,오답 구분
-    public char grade; //등급 나누기
+    public string grade; //등급 나누기
     
     //시작
     private void Start(){
