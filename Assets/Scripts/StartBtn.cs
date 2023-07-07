@@ -12,6 +12,5 @@ public class StartBtn : MonoBehaviour
     {
         TutorialPanel.SetActive(false);
         timerSet.Start();
-        
     }
 }

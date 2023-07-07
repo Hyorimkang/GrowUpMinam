@@ -10,6 +10,7 @@ public class TimerSet : MonoBehaviour
     public float time = 10f; //제한 시간
     private float selectCountDown; //카운트 다운
 
+//TODO: tutorial 패널이 false되면 타이머 시작하도록 설정
     public void Start(){
         selectCountDown = time;
     }
