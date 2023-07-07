@@ -7,14 +7,15 @@ public class ImageScript : MonoBehaviour
     public GameObject[] CorrectImage;  //정답 미남이 이미지
     public GameObject[] WrongImage;  //오답 미남이 이미지
     public Quiz quiz;
-
+    private int level;
 
     void Start(){
-        WrongImage[0].SetActive(true);
+        level=2;
+        WrongImage[level-1].SetActive(true);
     }
     void Update(){
         //level은 인자값으로 받아오기
-        int level = 1;
+        level = 2;
         //i는 배열 값
         int i = 0;
         //레벨 별로 나오도록 하는 이미지 상이하게 만들기

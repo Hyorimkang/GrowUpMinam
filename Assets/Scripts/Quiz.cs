@@ -13,14 +13,13 @@ public class Quiz : MonoBehaviour
     public GameObject QuizPanel;  //질문을 띄울 패널
     public GameObject GoPanel;  //게임오버 패널
     public GameObject TutorialPanel; //게임 방법 패널
-    
-    
     public StartBtn StartBtn;  //시작 버튼
     
     
     private int totalQuiz = 0;  //총 질문 개수
     public int score;  //정답 개수
     public bool check; //이미지 정,오답 구분
+    public char grade; //등급 나누기
     
     //시작
     private void Start(){
@@ -28,13 +27,13 @@ public class Quiz : MonoBehaviour
         GoPanel.SetActive(false);
         makeQuestion();
         StudySounds.instance.StudyBGM(); //BGM 재생
-        // TODO:레벨 메소드 생성하면 레벨에 맞춰 이미지가 변하도록 조건문 만들기
-        //Image_Minam.Wrong_Image[0].SetActive(true); //default 값 
     }
 
     //게임 시작 버튼 눌렀을 때
     public void GameStart(){
         StartBtn.StartButton();
+        PlayerPrefs.SetString("등급",ScoreGrade()); 
+        PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
     }
 
     //게임 종료
@@ -44,6 +43,20 @@ public class Quiz : MonoBehaviour
         ScoreText.text = "맞춘 개수 : "+score;
     }
 
+    private string ScoreGrade(){
+        //맞춘 개수 별 등급나누기
+        if(score==QnA.Count){
+            grade = "A";
+        }
+        else if(score >= (QnA.Count/2)){
+            grade = "B";
+        }
+        else{
+            grade = "C";
+        }
+        return grade;
+    }
+
     //정답
     public void correct(){
         score+=1; 
@@ -51,8 +64,6 @@ public class Quiz : MonoBehaviour
         makeQuestion();
         StudySounds.instance.Correct(); //정답 시 효과음
         check = true; //정답
-        // TODO:레벨 메소드 생성하면 레벨에 맞춰 이미지가 변하도록 조건문 만들기
-        //Correct_Image[0].SetActive(true); //정답 
     }
     
     //오답
@@ -62,8 +73,6 @@ public class Quiz : MonoBehaviour
             QnA.RemoveAt(currentQuestion);
             StudySounds.instance.Wrong(); //오답 시 효과음
             check = false; //오답
-            // TODO:레벨 메소드 생성하면 레벨에 맞춰 이미지가 변하도록 조건문 만들기
-            //Wrong_Image[0].SetActive(true); //오답 
         }
         makeQuestion();
     }
