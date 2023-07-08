@@ -8,6 +8,7 @@ public class ProloguePlay : MonoBehaviour
     int clickCount = 0;  //클릭 횟수
     public GameObject CurrentExplainPanel;  //현재 상황 설명해주는 패널
     public GameObject MotherAndMinamPanel;  //미남이와 엄마의 대화 패널
+    public GameObject TalkPanel;  //말풍선 패널
     public GameObject GameRulePanel;  //게임방법 패널
     public GameObject Mother;  //미남이 엄마
     public GameObject CryingMinam;  //울고 있는 미남이
@@ -56,6 +57,7 @@ public class ProloguePlay : MonoBehaviour
             TalkText.text = "엄마... 천국에서 지켜보고 있어. 꼭 달라질테니까";
         }else if(clickCount == 17){
             MotherAndMinamPanel.SetActive(false);  //미남이와 엄마 대화 패널 안 보이게 함
+            TalkPanel.SetActive(false);  //말풍선 패널 안 보이게 함
             GameRulePanel.SetActive(true);  //게임방법 패널 보이게 함
         }
 
