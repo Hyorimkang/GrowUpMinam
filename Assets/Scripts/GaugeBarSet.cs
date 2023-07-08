@@ -25,14 +25,15 @@ public class GaugeBarSet : MonoBehaviour
             PlayerPrefs.SetString("게임실행여부","게임실행");
         }
     }
+
+    //점수를 얼마나 줘야하노....
     public void GaugeFill(string grade)  //등급별로 게이지바 채우기
     {
         float amount = 0;
         switch(grade){
-            case "A" :amount = 0.1f; break;
+            case "A" :amount = 0.5f; break;
             case "B" : amount = 0.08f; break;
             case "C" : amount = 0.05f; break;
-            case "D" : amount = 0.03f; break;
         }
         Gauge += amount;
         GaugeBarImage.fillAmount = Gauge; 
