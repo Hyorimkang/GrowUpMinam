@@ -31,9 +31,9 @@ public class GaugeBarSet : MonoBehaviour
     {
         float amount = 0;
         switch(grade){
-            case "A" :amount = 0.5f; break;
-            case "B" : amount = 0.08f; break;
-            case "C" : amount = 0.05f; break;
+            case "A" :amount = 0.34f; break;
+            case "B" : amount = 0.3f; break;
+            case "C" : amount = 0.1f; break;
         }
         Gauge += amount;
         GaugeBarImage.fillAmount = Gauge; 
@@ -53,7 +53,7 @@ public class GaugeBarSet : MonoBehaviour
         if (GaugeBarImage.fillAmount >= 1f) //게이지가 꽉찼다면
         {
             LevelUp();
-            GaugeBarImage.fillAmount = Gauge;  //게이지 초기화
+            GaugeBarImage.fillAmount = Gauge;  //게이지바 초기화
         }
     }
 }
