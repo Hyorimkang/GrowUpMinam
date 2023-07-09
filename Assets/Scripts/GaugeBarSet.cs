@@ -26,8 +26,6 @@ public class GaugeBarSet : MonoBehaviour
             PlayerPrefs.SetString("게임실행여부","게임실행");
         }
     }
-
-    //점수를 얼마나 줘야하노....
     public void GaugeFill(string grade)  //등급별로 게이지바 채우기
     {
         float amount = 0;
@@ -52,7 +50,7 @@ public class GaugeBarSet : MonoBehaviour
     
     private void CheckLevelUp()  // 레벨업 체크
     {
-        if (GaugeBarImage.fillAmount >= 1f) //게이지가 꽉찼다면
+        if (PlayerPrefs.GetInt("운동하기")==1 && PlayerPrefs.GetInt("식단하기")==1 && PlayerPrefs.GetInt("공부하기")==1) //게임횟수 3번 다 채우면
         {
             LevelUp();
             GaugeBarImage.fillAmount = Gauge;  //게이지바 초기화

@@ -1429,6 +1429,7 @@ GameObject:
   - component: {fileID: 775152688}
   - component: {fileID: 775152687}
   - component: {fileID: 775152686}
+  - component: {fileID: 775152690}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -1522,6 +1523,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &775152690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775152685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65af8370f8fa6dc438b2df6ea622890c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExerciseButton: {fileID: 74574481}
+  DietButton: {fileID: 1342451291}
+  StudyButton: {fileID: 225912796}
 --- !u!1 &1086340062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,8 +1665,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.10852, y: -0.12099709}
-  m_Size: {x: 55.754898, y: 148.69652}
+  m_Offset: {x: 0.14743829, y: 0.6155815}
+  m_Size: {x: 5.1378255, y: 17.317848}
   m_Direction: 0
 --- !u!114 &1137495893
 MonoBehaviour:
@@ -1727,7 +1743,7 @@ Transform:
   m_GameObject: {fileID: 1137495891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: -0.64, z: 0}
-  m_LocalScale: {x: 0.05640213, y: 0.05640213, z: 0.05640213}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.05640213}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2701,8 +2717,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.10852, y: -0.12099709}
-  m_Size: {x: 55.754898, y: 148.69652}
+  m_Offset: {x: 0.162179, y: 0.4549694}
+  m_Size: {x: 5.1761885, y: 17.960354}
   m_Direction: 0
 --- !u!114 &1809659495
 MonoBehaviour:
@@ -2779,7 +2795,7 @@ Transform:
   m_GameObject: {fileID: 1809659493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: -0.64, z: 0}
-  m_LocalScale: {x: 0.05640213, y: 0.05640213, z: 0.05640213}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.05640213}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
