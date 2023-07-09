@@ -20,6 +20,7 @@ public class Quiz : MonoBehaviour
     public int score = 0;  //정답 개수
     public bool check; //이미지 정,오답 구분
     public string grade; //등급 나누기
+    private int knowledge; //지식 수준
     
     //시작
     private void Start(){
@@ -49,14 +50,17 @@ public class Quiz : MonoBehaviour
         //맞춘 개수 별 등급나누기
         if(score == totalQuiz){
             grade = "A";
+            knowledge = 20;
         }
         else if(score >= (totalQuiz/2)){
             grade = "B";
+            knowledge = 15;
         }
         else if(score == 0){
             grade = "C";
+            knowledge = 10;
         }
-        Debug.Log(grade);
+        Stats.Knowledge += knowledge;
         return grade;
     }
 

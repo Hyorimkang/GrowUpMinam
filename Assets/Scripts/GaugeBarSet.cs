@@ -9,7 +9,7 @@ public class GaugeBarSet : MonoBehaviour
     string grade;  //등급
     public GameObject[] MinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
     static int currentLevel = 0;  // 현재 레벨
-    public Evolution evolution; 
+    
 
     private void Start() {
         PlayerPrefs.SetInt("레벨",currentLevel);
@@ -47,7 +47,7 @@ public class GaugeBarSet : MonoBehaviour
         MinamObjects[currentLevel-1].SetActive(false);  // 이전 레벨 캐릭터 비활성화
         MinamObjects[currentLevel].SetActive(true);  // 현재 레벨 캐릭터 활성화
         Gauge = 0;  //게이지 초기화
-        //evolution.Start();  //진화하기
+       
     }
     
     private void CheckLevelUp()  // 레벨업 체크
