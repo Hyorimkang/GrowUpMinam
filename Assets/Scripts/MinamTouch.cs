@@ -5,7 +5,11 @@ using UnityEngine.UI;
 public class MinamTouch : MonoBehaviour
 {
     Vector2 touchPosition;
-    string[] MinamSay = {"엄마...","내가 성공할 수 있을까?", "쩝쩝짭짭짭","여동생을 날 어떻게\n생각할까?","아자!아자!"};  //미남이 말풍선 텍스트
+    string[] FirstMinamSay = {"엄마...","내가 성공할 수 있을까?", "엄마를 다시 만날 수 \n있다면...","아자!아자!"};  //1단계 미남이 말풍선 텍스트
+    string[] SecondMinamSay = {"엄마...","노력하는 건 역시 힘들어", "힘내야지...","나도 사람답게 살 수 \n있을까?"};  //2단계 미남이 말풍선 텍스트
+    string[] ThirdMinamSay = {"엄마...","확실히 자신감이 생겼어.", "공부하는 게 즐거워","헬스장을 다닐까?"};  //3단계 미남이 말풍선 텍스트
+    string[] FourthMinamSay = {"엄마...","좀 잘생겨진 것 \n같기도 하고...", "운동하는 게 즐거워","진로를 정해야 해."};  //4단계 미남이 말풍선 텍스트
+    string[] FifthMinamSay = {"엄마...","예전의 내가 아니야.", "엄마에게 이 모습을 \n보여주고 싶어.","매일매일이 즐거워."};  //5단계 미남이 말풍선 텍스트
     public Text BubbleText;  //말풍선 대사 텍스트
     public GameObject Bubble;  //말풍선 오브젝트
     bool isClicked = false;  // 클릭 이벤트 발생 여부를 저장하는 변수
@@ -47,7 +51,13 @@ public class MinamTouch : MonoBehaviour
         
     }
     void SpeechBubble(){  //말풍선 보이게
-        BubbleText.text = MinamSay[Random.Range(0, MinamSay.Length)];  //랜덤으로 대사가 나옴
+        switch(PlayerPrefs.GetInt("레벨")){  //랜덤으로 레벨별 미남이의 대사가 나옴
+            case 0: BubbleText.text = FirstMinamSay[Random.Range(0, FirstMinamSay.Length)]; break;
+            case 1: BubbleText.text = SecondMinamSay[Random.Range(0, SecondMinamSay.Length)]; break;
+            case 2: BubbleText.text = ThirdMinamSay[Random.Range(0, ThirdMinamSay.Length)]; break;
+            case 3: BubbleText.text = FourthMinamSay[Random.Range(0, FourthMinamSay.Length)]; break;
+            case 4: BubbleText.text = FifthMinamSay[Random.Range(0, FifthMinamSay.Length)]; break;
+        }
         Bubble.SetActive(true);
         timer = 0f;
     }

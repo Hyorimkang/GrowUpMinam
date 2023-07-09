@@ -8,7 +8,6 @@ public class ExerciseSounds : MonoBehaviour
     public AudioClip BGMClip;  //운동하기 화면 브금
     public AudioSource audioSource;  //오디오소스
     public static ExerciseSounds instance;
-
     void Awake()
     {
         if(ExerciseSounds.instance == null)
