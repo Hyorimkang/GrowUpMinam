@@ -43,11 +43,8 @@ public class ExerciseGamePlay : MonoBehaviour
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
                 Stats.Weight -= WeightLoss();  //몸무게 감량
-                PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
-
-        //여기 아래 두 코드 다른 미니게임에서도 게임 종료시에 넣어줘야함. 등급 나누는 메서드도 만들고
-                // PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
-                PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
+                PlayerPrefs.SetInt("운동하기",1);  //운동하기 게임 했는지 안했는지
+                PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
                 PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
