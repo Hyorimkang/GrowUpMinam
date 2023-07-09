@@ -17,9 +17,10 @@ public class Quiz : MonoBehaviour
     
     
     private int totalQuiz = 0;  //총 질문 개수
-    public int score;  //정답 개수
+    public int score = 0;  //정답 개수
     public bool check; //이미지 정,오답 구분
     public string grade; //등급 나누기
+    private int knowledge; //지식 수준
     
     //시작
     private void Start(){
@@ -32,8 +33,6 @@ public class Quiz : MonoBehaviour
     //게임 시작 버튼 눌렀을 때
     public void GameStart(){
         StartBtn.StartButton();
-        PlayerPrefs.SetString("등급",ScoreGrade()); 
-        PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
     }
 
     //게임 종료
@@ -41,19 +40,27 @@ public class Quiz : MonoBehaviour
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
         ScoreText.text = "맞춘 개수 : "+score;
+        PlayerPrefs.SetInt("공부하기",1);  //공부하기 게임 했는지 안했는지
+        ScoreGrade(); //등급 구하기
+        PlayerPrefs.SetString("등급",grade); //게이지로 등급 보내주기
+        PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
     }
 
     private string ScoreGrade(){
         //맞춘 개수 별 등급나누기
-        if(score==QnA.Count){
+        if(score == totalQuiz){
             grade = "A";
+            knowledge = 20;
         }
-        else if(score >= (QnA.Count/2)){
+        else if(score >= (totalQuiz/2)){
             grade = "B";
+            knowledge = 15;
         }
-        else{
+        else if(score == 0){
             grade = "C";
+            knowledge = 10;
         }
+        Stats.Knowledge += knowledge;
         return grade;
     }
 

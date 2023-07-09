@@ -18,8 +18,10 @@ public class ExerciseGamePlay : MonoBehaviour
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
     bool PlayCheck = false;  //게임시작 했는지 안했는지
     public GameObject[] ExercisingMinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
+    public GameObject EvolutionPanel; //진화 알림 패널
 
     private void Start() {
+        EvolutionPanel.SetActive(false);
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
         ExerciseSounds.instance.BGM();  //브금 재생
         ExercisingMinamObjects[PlayerPrefs.GetInt("레벨")].SetActive(true);  //현재 레벨 운동하는 미남이가 보이게
@@ -43,11 +45,8 @@ public class ExerciseGamePlay : MonoBehaviour
                 FatCountText.text = "지방 " + RemoveFatCount + "개 제거";  //제거 개수 텍스트설정
                 WeightLossText.text =  "총 " + WeightLoss() + "kg 감량 성공!";  //감량 kg 텍스트설정
                 Stats.Weight -= WeightLoss();  //몸무게 감량
-                PlayerPrefs.SetString("등급",WeightGrade(5));  //테스트용
-
-        //여기 아래 두 코드 다른 미니게임에서도 게임 종료시에 넣어줘야함. 등급 나누는 메서드도 만들고
-                // PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
-                PlayerPrefs.SetString("게임실행여부","게임종료");  //게임종료했는지 저장
+                PlayerPrefs.SetInt("운동하기",1);  //운동하기 게임 했는지 안했는지
+                PlayerPrefs.SetString("등급",WeightGrade(WeightLoss()));  //등급저장
                 PlayCheck = false;  //종료
             }else{
                 Timer -= Time.deltaTime;
