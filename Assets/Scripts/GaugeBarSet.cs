@@ -9,9 +9,11 @@ public class GaugeBarSet : MonoBehaviour
     string grade;  //등급
     public GameObject[] MinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
     static int currentLevel = 0;  // 현재 레벨
+    public GameObject EvolutionPanel; //진화 알림 패널
     
 
     private void Start() {
+        EvolutionPanel.SetActive(false);
         PlayerPrefs.SetInt("레벨",currentLevel);
         MinamObjects[currentLevel].SetActive(true);  //현재 레벨 미남이가 보이게
     }
@@ -43,7 +45,7 @@ public class GaugeBarSet : MonoBehaviour
         MinamObjects[currentLevel-1].SetActive(false);  // 이전 레벨 캐릭터 비활성화
         // MinamObjects[currentLevel].SetActive(true);  // 현재 레벨 캐릭터 활성화
         Gauge = 0;  //게이지 초기화
-       
+        EvolutionPanel.SetActive(true);
     }
     
     private void CheckLevelUp()  // 레벨업 체크

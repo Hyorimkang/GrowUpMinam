@@ -18,8 +18,10 @@ public class ExerciseGamePlay : MonoBehaviour
     public Text FatCountText;  //제거한 지방 총 개수 텍스트
     bool PlayCheck = false;  //게임시작 했는지 안했는지
     public GameObject[] ExercisingMinamObjects;  // 레벨에 따른 미남이 오브젝트 배열
+    public GameObject EvolutionPanel; //진화 알림 패널
 
     private void Start() {
+        EvolutionPanel.SetActive(false);
         GameOverPanel.SetActive(false);  //게임 종료 패널 안보이게 함
         ExerciseSounds.instance.BGM();  //브금 재생
         ExercisingMinamObjects[PlayerPrefs.GetInt("레벨")].SetActive(true);  //현재 레벨 운동하는 미남이가 보이게
