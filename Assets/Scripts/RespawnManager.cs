@@ -40,8 +40,9 @@ public class RespawnManager : MonoBehaviour
                 num.Add(i);
         }
         int x =0;
-        if(num, Count > 0)
-        x = num[Random.Range(0,num,Count)];
+        //if(num>=0 && Count >= 0){
+            //x = num[Random.Range(0,num,Count)];
+        //}
         return x;
     }
 
