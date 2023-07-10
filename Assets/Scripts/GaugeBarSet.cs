@@ -72,8 +72,8 @@ public class GaugeBarSet : MonoBehaviour
     
     private void CheckLevelUp()  // 레벨업 체크
     {
-        //게임횟수 3번 다 채우면
-        if (PlayerPrefs.GetInt("운동하기")==3 && PlayerPrefs.GetInt("식단하기")==3 && PlayerPrefs.GetInt("공부하기")==3) 
+        //게이지바를 다 채우면
+        if (GaugeBarImage.fillAmount >= 1) 
         {
             LevelUp();
         }

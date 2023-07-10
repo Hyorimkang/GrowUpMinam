@@ -7,16 +7,11 @@ public class Days : MonoBehaviour
 {
     public Text DayText;  //날짜 텍스트
     static int month = 1;  //월
-
-    private void Start() {
-        PlayerPrefs.SetString("운동하기버튼","활성화");
-        PlayerPrefs.SetString("공부하기버튼","활성화");
-        PlayerPrefs.SetString("식단하기버튼","활성화");
-    }
     void Update()
     {
         if(PlayerPrefs.GetString("운동하기버튼").Equals("비활성화") && PlayerPrefs.GetString("식단하기버튼").Equals("비활성화") && PlayerPrefs.GetString("공부하기버튼").Equals("비활성화")){  //미니게임을 3번 하면 한달 지남
             //다시 초기화
+            Debug.Log("한달지남");
             PlayerPrefs.SetString("운동하기버튼","활성화");
             PlayerPrefs.SetString("공부하기버튼","활성화");
             PlayerPrefs.SetString("식단하기버튼","활성화");
