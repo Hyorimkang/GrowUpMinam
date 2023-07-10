@@ -12,6 +12,9 @@ public class ProloguePlay : MonoBehaviour
     public GameObject GameRulePanel;  //게임방법 패널
     public GameObject Mother;  //미남이 엄마
     public GameObject CryingMinam;  //울고 있는 미남이
+    private void Start() {
+        MotherAndMinamPanel.SetActive(false);
+    }
     void Update()
     {
         if(Input.GetMouseButtonUp(0) || Input.touchCount>0){  //터치하면

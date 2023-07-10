@@ -1,0 +1,547 @@
+[33mcommit 4aa5ab58aed4aa1c1f02cf305c95d8337deb47aa[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: YeEun Park <komgolo67@naver.com>
+Date:   Mon Jul 10 11:33:12 2023 +0900
+
+    a
+
+[33mcommit 599715779889ab717d982cbc89758bc62f1b6ade[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 08:41:45 2023 +0900
+
+    공부하기 미남이 이미지 넣기
+
+[33mcommit 8873b7566f4da52081b8bf4c18f091b213ec8e72[m
+Merge: 117eabd 12c9c01
+Author: YeEun Park <komgolo67@naver.com>
+Date:   Mon Jul 10 06:54:41 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit 117eabdb4d59a0f8aba7744a9547bd5100173feb[m
+Author: YeEun Park <komgolo67@naver.com>
+Date:   Mon Jul 10 06:53:20 2023 +0900
+
+    점프오류해결해야함
+
+[33mcommit 12c9c01f7edc1924dfa18f107b6f9b9f9ff149f6[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 05:08:37 2023 +0900
+
+    진화 알림 창 만들기
+
+[33mcommit 2902e5570d9aec964abb9de8118222200dbc6f31[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 04:45:56 2023 +0900
+
+    삭제된 ImageScript 다시 만들기
+
+[33mcommit 3ed6a8dcbdb1202c12e742ddd25b2120497b5075[m
+Merge: f451890 dbbc0de
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 04:32:51 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit f4518905e09cac81affee43a0bbb520cca00ccfa[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 04:32:19 2023 +0900
+
+    공부하기 지식 수준 설정
+
+[33mcommit dbbc0deb3029521c517957fce00fb4e880adaf0a[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 03:16:09 2023 +0900
+
+    메인을 다시 정리해보았어요.
+
+[33mcommit aac2f8a0240cfb7c7807487876427fb0377ae578[m
+Merge: bf1bc9c 5fb2594
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 03:05:38 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit bf1bc9c667b2772f733003c72a1caae54024e2d2[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 03:02:40 2023 +0900
+
+    배드엔딩 씬 끝
+
+[33mcommit 33cb39caf23ef80ff127235ce101898582bb6f0c[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 02:39:06 2023 +0900
+
+    해피엔딩 씬 끝
+
+[33mcommit 5fb2594927b69bdcd8bf15b9a45ea3bdf3ed4fe7[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Mon Jul 10 02:22:15 2023 +0900
+
+    studymode done
+
+[33mcommit a472a2ac36d4aba7ec75663184646c5030c6ebc0[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 01:59:12 2023 +0900
+
+    프롤로그 게임방법 설명 추가
+
+[33mcommit 12451d1073bc0acb77f1a1aa311e935162ffa1de[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 10 01:38:48 2023 +0900
+
+    게임 플레이시 버튼 비활성화됨
+
+[33mcommit bbea16568c5f46afa8ed0ba426bd1ca1a80222f6[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 23:08:45 2023 +0900
+
+    제발 성공하길...2
+
+[33mcommit a5440edbaf70014b8a797d0f0c3e0f5c30d0e1f8[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 23:08:23 2023 +0900
+
+    제발 성공하길...
+
+[33mcommit 17dfadbe34656aa28683a1ab99f70b44c174c944[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 21:46:49 2023 +0900
+
+    잠시...
+
+[33mcommit 7512ecb59dc24b512e8f8ee43724ddbe6b8f956a[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sun Jul 9 21:19:20 2023 +0900
+
+    진화 씬 제작중
+
+[33mcommit 1eeeaf4a32926ef7cd98a41170478409d1b0f019[m
+Merge: 1c1c86b 3968526
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sun Jul 9 15:29:46 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit 1c1c86bb1dd153b365723d8bc9017dad14e1b4c7[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sun Jul 9 15:29:27 2023 +0900
+
+    Evolution Scene Start
+
+[33mcommit 39685260dc6635c1571596dac80098329db5d769[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 01:30:39 2023 +0900
+
+    등급별 점수 변경
+
+[33mcommit 305686e5f9af10705d5924a693599d0da7233dce[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 01:23:20 2023 +0900
+
+    진화하기 버튼 삭제
+
+[33mcommit 2d8084ef71cf482aabd5d20d42910fc60767087e[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 01:16:52 2023 +0900
+
+    [프롤로그] 게임방법
+
+[33mcommit 9cffde508950fd766783cbfba6d7133250c81ec2[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 00:49:50 2023 +0900
+
+    [프롤로그] 미남이와 엄마 대화
+
+[33mcommit f783ceee583563b4a1a388b82620be5531e377b6[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 9 00:21:20 2023 +0900
+
+    [프롤로그] 미남이 현재 상황 설명
+
+[33mcommit d89f28c75d15652bcc5511d813b9fe3a1c81b0db[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sat Jul 8 23:10:57 2023 +0900
+
+    프롤로그 씬 & 우는 미남이 추가
+
+[33mcommit 69a16f9a3860ee7b5542c90176037fc173b08a56[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sat Jul 8 22:00:52 2023 +0900
+
+    게임횟수 오류 해결
+
+[33mcommit b7d180c0db6f852f178177d73f5e6e9539bba972[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sat Jul 8 21:46:12 2023 +0900
+
+    미남이 레벨별 말풍선 대사 추가
+
+[33mcommit 868ed9642b7816114fb27d64534382e3e92782ea[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sat Jul 8 00:08:53 2023 +0900
+
+    grade 형변환
+
+[33mcommit f4bab759e8292e04364d2b284f59dc116990c08a[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sat Jul 8 00:00:36 2023 +0900
+
+    set grade & return grade
+
+[33mcommit 03d38c90e734e8f194f370827e7055688c64f254[m
+Merge: a2acead b79347c
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Fri Jul 7 23:09:23 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit a2acead81636364c0a86de8c6176337b153c754f[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Fri Jul 7 23:04:49 2023 +0900
+
+    정답, 오답 시 미남이 이미지 변하게 하기
+
+[33mcommit b79347c5656d6002452229cec9e53b0e5de5e78a[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Fri Jul 7 21:47:20 2023 +0900
+
+    진화하기 버튼
+
+[33mcommit 196ac7498eb2943af684b2f5590341dcf18ebff6[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jul 6 18:58:17 2023 +0900
+
+    타이머 멈춤 해결
+
+[33mcommit b3035c1dd9bcb644c12e23529b5bc6d6e2c54e9d[m
+Merge: 03f077f f9fcf21
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jul 6 17:48:54 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit 03f077f716ebf5ee8fa6d977807e2faae063644a[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jul 6 17:48:36 2023 +0900
+
+    정답, 오답 시 소리나게 하기
+
+[33mcommit f9fcf21099c511e85f16726c64f1bd474c8fead7[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Wed Jul 5 20:18:21 2023 +0900
+
+    레벨업하면 운동하기 화면 미남이 바뀜
+
+[33mcommit a1c6455694bbe376944ee6b885c60a7965ee66ab[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Tue Jul 4 00:06:43 2023 +0900
+
+    미남이 진화 오류 해결
+
+[33mcommit 58f5d4f3a8aff0254b9e49caca1eab3baf6c4ba6[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 3 23:57:37 2023 +0900
+
+    레벨업하면 메인화면 미남이 바뀜
+
+[33mcommit 0915276a7ae35890d0a00dd382bf0d2771430c1d[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jul 3 22:50:30 2023 +0900
+
+    메인화면에 2단계 미남이와 3단계 미남이 추가
+
+[33mcommit 918e3e7b53f50642562273114b40f95a989930dc[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jul 2 23:39:20 2023 +0900
+
+    3단계 운동하는 미남이 애니메이션
+
+[33mcommit cf668540f1d6155777252614f707bc633f22e6c5[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sat Jul 1 18:46:02 2023 +0900
+
+    등급별로 게이지 올라감
+
+[33mcommit a37c363799801d3508ca38392299e7257ab39f1e[m
+Merge: e8e0d4c e396161
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sat Jul 1 17:23:54 2023 +0900
+
+    게임 몇번 플레이하면 날짜 지나게 함
+
+[33mcommit e39616135460605d4ad4f971c79a63e72142be6d[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Fri Jun 30 00:31:17 2023 +0900
+
+    정답, 오답시 효과음 나기
+
+[33mcommit e8e0d4cd7adaaea4ad189b07a92de119bbf4237f[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 29 23:14:25 2023 +0900
+
+    다시
+
+[33mcommit 4f23f2a6d32cadc7b3411def3f161cd7a8b5777e[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jun 29 23:09:37 2023 +0900
+
+    시간 초과시 0초로 세팅
+
+[33mcommit b653d838fcc8ca3924b481a81a2b6cb24a64465e[m
+Merge: 4c1777b 0fad4d5
+Author: 이지연 <88700583+jiyeon11@users.noreply.github.com>
+Date:   Thu Jun 29 22:02:51 2023 +0900
+
+    Merge pull request #4 from jiyeon11/master
+    
+    원래대로 돌아가게 해주세요
+
+[33mcommit 0fad4d5f785192f150c5138d853d3a2b182b2765[m
+Merge: 52df26d a41cdd5
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 29 01:42:19 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit 52df26dc237b3abe8545e7742cde841d5180c6ea[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 29 01:34:36 2023 +0900
+
+    게이지바
+
+[33mcommit a41cdd56c3c394ef503a55427ad0c6d5cd3386bc[m
+Merge: 4c1777b 2890023
+Author: YeEun <109490372+hyeunj@users.noreply.github.com>
+Date:   Wed Jun 28 08:27:00 2023 +0900
+
+    Merge pull request #3 from jiyeon11/master
+    
+    파일을 하나로 수정 했습니다...
+
+[33mcommit 2890023d43e58c21a148d017869e3901005caed6[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Tue Jun 27 23:43:46 2023 +0900
+
+    파일 문제 수정
+
+[33mcommit 6779542493a392b946216d4d26cd91b5119d36f3[m
+Merge: d6e31cd 4c1777b
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Tue Jun 27 18:29:20 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit d6e31cd1b3b102a384683a260d838436bed3ccc8[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Tue Jun 27 00:40:30 2023 +0900
+
+    2단계 운동하는 미남이 애니메이션
+
+[33mcommit 4c1777bea9fb510dc62eb361e310121573534654[m
+Author: YeEun Park <komgolo67@naver.com>
+Date:   Mon Jun 26 13:21:17 2023 +0900
+
+    first history
+
+[33mcommit 64545bdcf25f7ce1b448ad7227dfc828b489c50a[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jun 26 00:01:48 2023 +0900
+
+    말풍선 위치 고정
+
+[33mcommit f3b7c339e9170e061ee898020fbf76215da85c02[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jun 25 22:29:51 2023 +0900
+
+    미남이 터치 시 말풍선 보임
+
+[33mcommit 4956dd20c27ff36186ba534e36136d59523305be[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jun 25 19:31:04 2023 +0900
+
+    원래 몸무게에 감량한 몸무게 반영
+
+[33mcommit 30b8bb5fd0399b3ecce49b6257d7c3bf11265c68[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jun 25 19:17:40 2023 +0900
+
+    운동하기 게임 종료 후에도 지방 클릭이 가능한 오류 해결
+
+[33mcommit e0fecdcab347acdebd5979b6d52527a6e0efaebf[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jun 25 18:58:04 2023 +0900
+
+    메인 배경음악 재생
+
+[33mcommit 9e205fd1befcd5f1c78b9b8ad4ab21ca56fb074e[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Sun Jun 25 03:26:09 2023 +0900
+
+    운동하기 배경음악, 효과음 재생
+
+[33mcommit 2f1bc64dd54a8d07c994ab2b05a74a4797bf096f[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Sat Jun 24 01:48:23 2023 +0900
+
+    튜토리얼 패널 제작 & 타이머, 재귀 호출 오류 해결
+
+[33mcommit deef17beb4542375450e9bcbadfbbeb12c372c26[m
+Merge: 167ee3c 6719ed3
+Author: 이지연 <88700583+jiyeon11@users.noreply.github.com>
+Date:   Fri Jun 23 23:25:04 2023 +0900
+
+    Merge pull request #2 from jiyeon11/master
+    
+    다시 되돌려주세요
+
+[33mcommit 6719ed36eb72c6cd7d6d1cf75ab5b4146f052fe1[m
+Merge: 92bfb05 167ee3c
+Author: 이지연 <88700583+jiyeon11@users.noreply.github.com>
+Date:   Fri Jun 23 23:19:19 2023 +0900
+
+    Merge branch 'hyeunj:master' into master
+
+[33mcommit 167ee3ce5dd99b889d40195ccb9bea8c729ac60e[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Fri Jun 23 22:29:18 2023 +0900
+
+    오류 수정
+
+[33mcommit 92bfb05279449ba08da6ba641a8bd5e8b77a5cf2[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Fri Jun 23 00:50:26 2023 +0900
+
+    운동하기 게임 종료 화면 & 메인으로 다시 돌아가기
+
+[33mcommit 4f2e98642b3514bcaebbb53dabf163af873fd540[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 22 23:27:35 2023 +0900
+
+    운동하기 타이머
+
+[33mcommit 593d88e826694c4fdd89367ebde219cbaaebd5b3[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 22 18:24:34 2023 +0900
+
+    정리
+
+[33mcommit 72f66f1f81497235ec6317cf8927afa813645239[m
+Merge: 91eb727 1146642
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 22 18:20:41 2023 +0900
+
+    지방 이미지 변경 & 지방 랜덤 생성 및 제거
+
+[33mcommit 91eb7273e769741fb141cb6333c07011a8d233ae[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 22 15:46:29 2023 +0900
+
+    지방 랜덤 생성 및 제거 & 점수 기능
+
+[33mcommit 1146642e315597072f87f6095200462f97699648[m
+Merge: 645e770 d5de3b9
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jun 22 02:08:07 2023 +0900
+
+    merge error 해결하기
+
+[33mcommit 645e770f11f43a9cf1126a7dec8a7ad46d1c6825[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Thu Jun 22 02:02:51 2023 +0900
+
+    타이머 오류 해결중
+
+[33mcommit d5de3b9a656ac1eac66fa1ea40b6260da363640e[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Thu Jun 22 01:02:41 2023 +0900
+
+    지방 오브젝트 랜덤 생성
+
+[33mcommit a57ffe84ea039d48a449f96c79e3af72c4a0bb41[m
+Merge: 716113f 112b724
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Wed Jun 21 19:48:32 2023 +0900
+
+    Merge branch 'master' of https://github.com/hyeunj/GrowUpMinam
+
+[33mcommit 716113fac422f6416e83591dd69f8d0239d3da67[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Wed Jun 21 19:39:04 2023 +0900
+
+    [운동하기]지방 오브젝트 랜덤 생성
+
+[33mcommit 112b724871ce1ea88a5fc6b6931546c26681d1a4[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Wed Jun 21 15:16:40 2023 +0900
+
+    메인에서 공부하기 넘어가는 씬 제작
+
+[33mcommit 43447d315a9382a76baaca6e304f3f268b451d5a[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Wed Jun 21 15:13:56 2023 +0900
+
+    배경 소리나기
+
+[33mcommit b651ff955874deaf1f7be148eb9f21cb1e957650[m
+Merge: 1ca7bff 4ef5017
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Wed Jun 21 01:57:23 2023 +0900
+
+    오디오 겹칩 해결중
+
+[33mcommit 1ca7bff5d87446bdce9db29af99acbbc006dfb95[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Wed Jun 21 01:53:26 2023 +0900
+
+    오디오 겹칩 해결중
+
+[33mcommit 4ef50174748e4c7d0097059f6294459d000d1860[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Wed Jun 21 00:14:25 2023 +0900
+
+    운동하는 미남이 애니메이션
+
+[33mcommit 55a8f7a8fb86ac0f9b70ab68fcefd953e9265106[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Tue Jun 20 23:38:14 2023 +0900
+
+    배경 오디오 삽입
+
+[33mcommit 86d326d8c51ee68333224966601349516d51d88c[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Tue Jun 20 09:58:16 2023 +0900
+
+    틀리면 넘어가기
+
+[33mcommit 586e3be1c28ef8d96c3bbb7168124c75a014d16e[m
+Author: HyorimKang <s2219@e-mirim.hs.kr>
+Date:   Tue Jun 20 00:39:48 2023 +0900
+
+    공부하기
+
+[33mcommit d7ea7fab9841eb83b24b58e959430745df166339[m
+Merge: 4c3f4f8 435447b
+Author: YeEun <109490372+hyeunj@users.noreply.github.com>
+Date:   Mon Jun 19 19:39:26 2023 +0900
+
+    Merge pull request #1 from jiyeon11/master
+
+[33mcommit 435447bb62f69d60b4aa9747f1ac06326f878eb1[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jun 19 17:02:15 2023 +0900
+
+    메인화면 버튼
+
+[33mcommit 5fa3e36ece23cf1e2ff51906c00427473c47506d[m
+Author: 이지연 <leejiyeon415@gmail.com>
+Date:   Mon Jun 19 01:35:13 2023 +0900
+
+    미남이를 클릭했을 때 말풍선 이벤트 발생할 수 있도록 준비
+
+[33mcommit 4c3f4f88f0da713b8c196e92c6f5fb10955cee75[m
+Author: YeEun Park <komgolo67@naver.com>
+Date:   Sat Jun 17 20:01:55 2023 +0900
+
+    first commit
+
+[33mcommit 9981d
