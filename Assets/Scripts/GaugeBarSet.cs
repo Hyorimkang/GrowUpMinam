@@ -46,7 +46,7 @@ public class GaugeBarSet : MonoBehaviour
     {
         float amount = 0;
         switch(grade){
-            case "A" :amount = 0.34f; break;
+            case "A" :amount = 0.5f; break;
             case "B" : amount = 0.3f; break;
             case "C" : amount = 0.1f; break;
         }

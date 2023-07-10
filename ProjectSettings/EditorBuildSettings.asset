@@ -10,28 +10,28 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
-    guid: 540f4d7fe1b3c254c91ec0862ad682b9
+    guid: ae11412be01c73b46993aa861d09e9a7
   - enabled: 1
     path: Assets/Scenes/StudyMode.unity
-    guid: 8672a89f7a5404b429b3810ead97c772
+    guid: 2996e626ab9e36a448cd0af3749c1efd
   - enabled: 1
     path: Assets/Scenes/ExerciseScene.unity
-    guid: e7ccea3c00dc07e49ab9c84e44f27400
+    guid: a9435259d59ef3a4d91469f8b5c70d5a
   - enabled: 1
     path: Assets/Scenes/Start_Scene.unity
-    guid: e596f21cccbfbe7469c12d846af3ecd8
+    guid: 3bd43580297a6364985d6c20b986f824
   - enabled: 1
     path: Assets/Scenes/BadEndingScene.unity
-    guid: 24fecb76d3139564e8186873b52d7bfd
+    guid: 4ba548efebf63c74abd3e70e6edaed89
   - enabled: 1
     path: Assets/Scenes/HappyEndingScene.unity
-    guid: fbfa0b1631d60874b9f8bc16786c9374
+    guid: 52e76f4de47455546955d77a6f69cae0
   - enabled: 1
     path: Assets/Scenes/PrologueScene.unity
-    guid: 9f6ca8bd76bc8fa45944bd46f17ead9a
-  - enabled: 1
+    guid: 8e6abf11f8db373428f04b86e0d52b91
+  - enabled: 0
     path: Assets/Scenes/DietRunGame.unity
-    guid: 74d4b78f1b48f4b4db9531ab7d5a9832
+    guid: ebedaaa2cdeed0a49a043b69f93bc8d4
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8d85a27563fee274baa8b6aabda42e94, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 646fd8f9acdfffe4faebb505de14c841, type: 2}
