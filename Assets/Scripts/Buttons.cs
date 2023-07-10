@@ -8,6 +8,11 @@ public class Buttons : MonoBehaviour
     public Button ExerciseButton;
     public Button DietButton;
     public Button StudyButton;
+
+    // private void Start() {
+    //     ExerciseButton.interactable = true;
+    //     StudyButton.interactable = true;
+    // }
     private void Update() 
     {
         if(PlayerPrefs.GetInt("운동하기") == 0){  //아직 운동하기 게임을 플레이하지 않았다면 버튼 활성화
