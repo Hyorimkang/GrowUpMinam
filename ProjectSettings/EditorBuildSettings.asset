@@ -17,6 +17,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ExerciseScene.unity
     guid: e7ccea3c00dc07e49ab9c84e44f27400
+  - enabled: 1
+    path: Assets/Scenes/Start_Scene.unity
+    guid: e596f21cccbfbe7469c12d846af3ecd8
+  - enabled: 1
+    path: Assets/Scenes/BadEndingScene.unity
+    guid: 24fecb76d3139564e8186873b52d7bfd
+  - enabled: 1
+    path: Assets/Scenes/HappyEndingScene.unity
+    guid: fbfa0b1631d60874b9f8bc16786c9374
+  - enabled: 1
+    path: Assets/Scenes/PrologueScene.unity
+    guid: 9f6ca8bd76bc8fa45944bd46f17ead9a
+  - enabled: 1
+    path: Assets/Scenes/DietRunGame.unity
+    guid: 74d4b78f1b48f4b4db9531ab7d5a9832
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 8d85a27563fee274baa8b6aabda42e94, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 646fd8f9acdfffe4faebb505de14c841, type: 2}
