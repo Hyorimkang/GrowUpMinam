@@ -381,7 +381,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 653444517}
         m_TargetAssemblyTypeName: StartGameButton, Assembly-CSharp
-        m_MethodName: GoPrologScene
+        m_MethodName: GoPrologueScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

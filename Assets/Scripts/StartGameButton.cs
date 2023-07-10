@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class StartGameButton : MonoBehaviour
 {
-    public void GoPrologScene(){
+    public void GoPrologueScene(){
         SceneManager.LoadScene("PrologueScene");
         Debug.Log("프롤로그 씬 가기 버튼 클릭!");
     }
