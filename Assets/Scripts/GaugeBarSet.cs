@@ -63,6 +63,10 @@ public class GaugeBarSet : MonoBehaviour
         MinamObjects[currentLevel].SetActive(true);  // 현재 레벨 캐릭터 활성화
         Gauge = 0;  //게이지 초기화
         GaugeBarImage.fillAmount = Gauge;  //게이지바 초기화
+        //게임여부 다 초기화 해줌 
+        PlayerPrefs.SetInt("운동하기",0);
+        PlayerPrefs.SetInt("식단하기",0);
+        PlayerPrefs.SetInt("공부하기",0);
         EvolutionPanel.SetActive(true);
     }
     

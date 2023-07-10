@@ -9,8 +9,6 @@ public class Buttons : MonoBehaviour
     public Button ExerciseButton;
     public Button DietButton;
     public Button StudyButton;
-    private void Start() {
-    }
     private void Update() 
     {
         if(PlayerPrefs.GetString("운동하기버튼").Equals("활성화")){  //아직 운동하기 게임을 플레이하지 않았다면 버튼 활성화

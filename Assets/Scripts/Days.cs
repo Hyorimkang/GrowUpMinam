@@ -23,7 +23,7 @@ public class Days : MonoBehaviour
             month += 1;  //날짜 증가
         }
         DayText.text = "날짜: " + month + "월";  //날짜 텍스트 설정
-        if(month == 5){  //5월이면 몇 레벨인지 체크함 
+        if(month == 6){  //6월이 되면 몇 레벨인지 체크함 
             LastCheck();
         }
     }
