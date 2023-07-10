@@ -82,10 +82,8 @@ public class ExerciseGamePlay : MonoBehaviour
             loss = 5;
         else if(RemoveFatCount>=50)  //50개 이상이면 3kg 감량
             loss = 3;
-        else if(RemoveFatCount>=20)  //20개 이상이면 2kg 감량
-            loss = 2;
         else if(RemoveFatCount>=0)  //0개 이상이면 1kg 감량
-            loss = 1;
+            loss = 2;
         return loss;
     }
     private string WeightGrade(int weightLoss){  //감량한 몸무게 등급 나누기
@@ -94,7 +92,6 @@ public class ExerciseGamePlay : MonoBehaviour
             case 5: grade = "A"; break;
             case 3: grade = "B"; break;
             case 2: grade = "C"; break;
-            case 1: grade = "D"; break;
         }
         return grade;
     }
