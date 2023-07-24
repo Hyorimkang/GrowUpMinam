@@ -15,12 +15,11 @@ public class ImageScript : MonoBehaviour
         //level을 받아오기
         PlayerPrefs.SetInt("레벨", level); 
         WrongImage[level].SetActive(true);
-        //ChangeImage(level);
     }
     void Update(){
         
         //처음에는 모든 미남이 false만들기 
-        for(i = 0; i<3; i++){
+        for(i = 0; i<5; i++){
             CorrectImage[i].SetActive(false);
             WrongImage[i].SetActive(false);
         }
